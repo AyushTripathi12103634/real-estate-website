@@ -1,0 +1,11 @@
+import express from "express";
+import { addpropertyController, boughtpropertyController, buypropertyController, deletepropertyController, getallpropertiesController, getpropertyController, updatepropertyController } from "../controllers/propController.js";
+const router = express.Router();
+router.post("/add-property",addpropertyController);
+router.get("/get-properties",getallpropertiesController);
+router.get("/get-property/:id",getpropertyController);
+router.put("/update-property/:id",updatepropertyController);
+router.post("/buy-property",buypropertyController);
+router.post("/delete-property",deletepropertyController);
+router.get("/bought-properties",boughtpropertyController);
+export default router;
